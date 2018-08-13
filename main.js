@@ -30,7 +30,8 @@ var mainState = {
         // Add gravity to the bird to make it fall
         this.bird.body.gravity.y = 1000;  
          // Move the anchor to the left and downward
-        this.bird.anchor.setTo(-0.2, 0.5); 
+        this.bird.anchor.setTo(-0.2, 0.5);
+        this.bird.scale.setTo(0.3, 0.3);
 
         // Call the 'jump' function when the spacekey is hit
         var spaceKey = game.input.keyboard.addKey(
@@ -97,7 +98,7 @@ var mainState = {
 
     addOnePipe: function(x, y) {
         // Create a pipe at the position x and y
-        var pipe = game.add.sprite(x, y, 'pipe');
+        var pipe = game.add.sprite(x, y, 'pipe', );
     
         // Add the pipe to our previously created group
         this.pipes.add(pipe);
